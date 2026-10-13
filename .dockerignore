@@ -1,0 +1,9 @@
+.git
+.gitignore
+.mvn
+target
+build
+*.log
+Dockerfile
+docker-compose*.yml
+README.md
