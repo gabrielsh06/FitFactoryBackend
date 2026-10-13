@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -21,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
  *       "Authorize" en Swagger UI sigue disponible para comodidad del developer.</li>
  * </ul>
  *
- * <p>Acceso: {@code http://localhost:8082/swagger-ui.html}
+ * <p>Acceso local: {@code http://localhost:8082/swagger-ui.html}
  */
 @Configuration
 @OpenAPIDefinition(
@@ -33,9 +32,6 @@ import org.springframework.context.annotation.Configuration;
                 contact     = @Contact(name = "Equipo FitFactory UTP"),
                 license     = @License(name = "MIT")
         ),
-        servers = {
-                @Server(url = "http://localhost:8082", description = "Desarrollo local"),
-        },
         // Aplica bearerAuth a TODOS los endpoints por defecto.
         // Los endpoints públicos tienen permitAll() en SecurityConfig, así que el token
         // es opcional para ellos aunque aparezca el candado en Swagger UI.
